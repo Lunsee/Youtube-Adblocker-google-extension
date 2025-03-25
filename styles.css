@@ -1,0 +1,7 @@
+ytd-ad-slot-renderer,
+.ytp-ad-module,
+ytd-promoted-video-renderer,
+ytd-display-ad-renderer,
+.ytp-ad-overlay-container {
+  display: none !important;
+}

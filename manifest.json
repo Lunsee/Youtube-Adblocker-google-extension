@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube AdBlocker",
+    "version": "1.0",
+    "description": "Blocks ads on YouTube",
+    "permissions": [
+        "storage",
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
+        "*://www.youtube.com/*",
+        "*://*.googlevideo.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://www.youtube.com/*"],
+            "js": ["content.js"],
+            "css": ["styles.css"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        }
+    }
+}
